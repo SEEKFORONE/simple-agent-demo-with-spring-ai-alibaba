@@ -1,0 +1,17 @@
+spring:
+  ai:
+    dashscope:
+      api-key: aaaa   # 从环境变量读取
+      chat:
+        options:
+          model: qwen-plus            # 可选：qwen-turbo、qwen-plus、qwen-max
+          temperature: 0.7
+    ollama:
+      base-url: http://localhost:11434
+      chat:
+        options:
+          model: qwen2.5-coder:7b
+          temperature: 0.3
+  autoconfigure:
+    exclude:
+     - org.redisson.spring.starter.RedissonAutoConfigurationV2 # 用不到的时候这里排除下
